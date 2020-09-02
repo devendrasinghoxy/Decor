@@ -61,6 +61,18 @@ img{
     -moz-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+.v_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
 /*==== pagination css start ====*/
 .pagination_wrap {
     display: inline-block;
@@ -1042,6 +1054,36 @@ button:focus, input:focus, select:focus, textarea:focus{
     background: var(--secondary_color);
     border: none;
     color: #fff;
+}
+.slide_item {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: -webkit-calc(100vh - 131px);
+    height: -moz-calc(100vh - 131px);
+    height: calc(100vh - 131px);
+}
+.slide_item .overlay {
+    opacity: 0.4;
+}
+.slide_item .slide_img {
+    display: none !important;
+}
+.slider_caption_text h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.slider_caption_text p {
+    color: #f1f1f1;
+    font-weight: normal;
+    margin-bottom: 25px;
 }
 /*==== slider css Start ====*/
 /*==== offer banner section css Start ====*/

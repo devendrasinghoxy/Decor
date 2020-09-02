@@ -349,4 +349,9 @@
 	}
 	//wow animation js
 	new WOW().init();
+	//slider img call in bg
+	$(".slide_img").each(function () {
+		var img_path = $(this).attr("src");
+		$(this).parents(".slide_item").css("background-image","url("+img_path+")");
+	});
 })(jQuery);
