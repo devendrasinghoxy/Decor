@@ -91,13 +91,15 @@
 			items:1,
 			loop:true,
 			margin:10,
-			autoplay:false,
-			autoplayTimeout:3000,
+			autoplay:true,
+			autoplayTimeout:7000,
 			autoplaySpeed:1500,
 			smartSpeed:1500,
 			dots:false,
 			nav:true,
 			navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+			animateOut: 'zoomout',
+			animateIn: 'zoomin'
 		});
 	}
 	//Brands slider

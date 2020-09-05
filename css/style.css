@@ -1085,8 +1085,66 @@ button:focus, input:focus, select:focus, textarea:focus{
     font-weight: normal;
     margin-bottom: 25px;
 }
+
+.read_m_link {
+    color:var(--secondary_color);
+    font-weight: 600;
+    position: relative;
+	text-decoration:none;
+	display:inline-block;
+}
+.read_m_link:before {
+	position: absolute;
+    content: "";
+	background: var(--primary_color);
+    width: 0%;
+	height:1px;
+	left:0;
+	bottom:0;
+	transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+}
+.read_m_link:hover{
+    color:var(--secondary_color);
+	text-decoration:none;
+}
+.read_m_link:hover:before{
+    width:100%;
+}
 /*==== slider css Start ====*/
+/*==== slider animation css Start ====*/
+.home_slider .owl-item.active {
+    -webkit-animation-duration: 5s !important;
+    -moz-duration: 5s !important;
+    animation-duration: 5s !important;
+}
+.home_slider .owl-item.active .slider_caption_text h3{
+	-webkit-animation: frombottom 1s 1 4s both;
+	-moz-animation: frombottom 1s 1 4s both;
+	animation: frombottom 1s 1 4s both;
+}
+.home_slider .owl-item.active .slider_caption_text p{
+	-webkit-animation: frombottom 1s 1 4.5s both;
+	-moz-animation: frombottom 1s 1 4.5s both;
+	animation: frombottom 1s 1 4.5s both;
+}
+.home_slider .owl-item.active .slider_caption_text .slider_btn{
+	-webkit-animation: frombottom 1s 1 5s both;
+	-moz-animation: frombottom 1s 1 5s both;
+	animation: frombottom 1s 1 5s both;
+}
+/*==== slider animation css End ====*/
 /*==== offer banner section css Start ====*/
+.ofr_banner_cols{
+	overflow:hidden;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 50px;
+    background: #fff;
+	transition:all ease-in-out 0.3s;
+	-webkit-transition:all ease-in-out 0.3s;
+	-moz-transition:all ease-in-out 0.3s;
+}
 .offer_banner_box {
     display: inline-block;
     width: 100%;
@@ -1094,9 +1152,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
-	margin-bottom:50px;
-	z-index:1;
-	border:1px solid #dcdcdc;
+    z-index: 1;
 }
 .offer_banner_box:after {
     position: absolute;
@@ -1152,9 +1208,17 @@ button:focus, input:focus, select:focus, textarea:focus{
     color: var(--primary_color);
     margin-left: 4px;
 }
-.offer_caption_text .collection_lnk:hover, 
-.offer_caption_text .cate_link:hover {
+.ofr_banner_cols:hover {
+    box-shadow: 2px 2px 13px 2px rgb(0 0 0 / 22%);
+    -webkit-box-shadow: 2px 2px 13px 2px rgb(0 0 0 / 22%);
+    -moz-box-shadow: 2px 2px 13px 2px rgb(0 0 0 / 22%);
+}
+.offer_banner_box:hover .collection_lnk, 
+.offer_banner_box:hover .cate_link {
     color: var(--primary_color);
+}
+.offer_banner_box:hover .read_m_link:before{
+	width:100%;
 }
 /*==== offer banner section css Start ====*/
 /*==== product Tab section css Start ====*/
@@ -1309,12 +1373,12 @@ button:focus, input:focus, select:focus, textarea:focus{
 .product_items .overlay {
     opacity: 0;
     visibility: hidden;
-    background: rgba(255, 255, 255, 0.59);
-    transform: scale3d(0.5, 0.5, 0.5);
-    -webkit-transform: scale3d(0.5, 0.5, 0.5);
-    -moz-transform: scale3d(0.5, 0.5, 0.5);
-    -ms-transform: scale3d(0.5, 0.5, 0.5);
-    -o-transform: scale3d(0.5, 0.5, 0.5);
+    background: rgb(255 255 255 / 0.80);
+	transform: scale3d(1.2, 1.2, 1.2);
+	-webkit-transform: scale3d(1.2, 1.2, 1.2);
+	-moz-transform: scale3d(1.2, 1.2, 1.2);
+	-ms-transform: scale3d(1.2, 1.2, 1.2);
+	-o-transform: scale3d(1.2, 1.2, 1.2);
 	align-items:center;
 }
 .product_items:hover .overlay {
