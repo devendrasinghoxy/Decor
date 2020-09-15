@@ -73,6 +73,14 @@ img{
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+.v_center{
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.h_center{
+	justify-content:center;
+}
 /*==== pagination css start ====*/
 .pagination_wrap {
     display: inline-block;
@@ -808,7 +816,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     -webkit-transition: all ease-in 0.25s;
     -moz-transition: all ease-in 0.25s;
     -ms-transition: all ease-in 0.25s;
-    z-index: 1;
+    z-index: 10;
     padding: 0;
     list-style: none;
     text-align: left;
@@ -1967,6 +1975,12 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 /*==== card payment form css ====*/
 /*==== about css Start ====*/
+.about_page_wrapper .row {
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
 .about_text h4 {
     font-weight: 600;
     font-size: 26px;
@@ -1987,6 +2001,12 @@ button:focus, input:focus, select:focus, textarea:focus{
     width: 40%;
     margin-right: 20px;
     margin-bottom: 15px;
+}
+.about_page_wrapper .about_text {
+    margin-bottom: 30px;
+}
+.about_page_wrapper .about_thumb {
+    margin-bottom: 20px;
 }
 /*==== about css Start ====*/
 /*==== Gallery css Start ====*/

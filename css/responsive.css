@@ -64,6 +64,12 @@
 	.mobile_view{
 		display:none;
 	}
+	.row_reverse {
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		-moz-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+	}
 }
 @media(max-width:991px){
 	.header_center {
