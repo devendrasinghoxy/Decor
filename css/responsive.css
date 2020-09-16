@@ -300,6 +300,17 @@
 	.copyright_footer{
 		text-align:center;
 	}
+	/* contact css */
+	.contact_form_cover {
+		margin-bottom: 20px;
+	}
+	.contact_heading {
+		margin-bottom: 25px;
+	}
+	.contact_heading .heading {
+		font-size: 24px;
+	}
+	/* contact css */
 }
 @media(max-width:991px){
 	.width_30 {

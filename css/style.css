@@ -2007,6 +2007,19 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .about_page_wrapper .about_thumb {
     margin-bottom: 20px;
+    -webkit-transition: all ease-in 0.3s;
+    -moz-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
+    padding: 5px;
+    border-radius: 4px;
+	  -webkit-box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+}
+.about_page_wrapper .about_thumb:hover {
+    -webkit-box-shadow: 0 0 12px rgb(0 0 0 / 40%);
+    -moz-box-shadow: 0 0 12px rgb(0 0 0 / 40%);
+    box-shadow: 0 0 12px rgb(0 0 0 / 40%);
 }
 /*==== about css Start ====*/
 /*==== Gallery css Start ====*/
@@ -2227,6 +2240,16 @@ button:focus, input:focus, select:focus, textarea:focus{
 /*==== contact section css Start ====*/
 .sc_contact_section {
     position: relative;
+    margin-top: -100px;
+}
+.contact_container_dv {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+    -webkit-box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0 0 12px rgb(0 0 0 / 25%);
+    padding: 0;
 }
 .contact_left_part{
 	display: inline-block;
@@ -2236,21 +2259,20 @@ button:focus, input:focus, select:focus, textarea:focus{
 .contact_form_cover {
     display: inline-block;
     width: 100%;
-	margin-bottom:50px;
+    padding: 20px 0 20px 20px;
 }
 .contact_heading {
     margin-bottom: 30px;
 }
-.contact_heading h3 {
-    margin: 0 0 5px;
-    font-weight: 700;
-    font-size: 24px;
+.contact_heading .heading {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 26px;
     text-transform: capitalize;
 }
 .contact_form {
     float: left;
     width: 100%;
-    margin-bottom: 60px;
 }
 .contact_form .form_group {
     margin-bottom: 14px;
@@ -2321,10 +2343,16 @@ button:focus, input:focus, select:focus, textarea:focus{
     width: 100%;
     margin: 50px 0;
 }
-.contact_address{
-	float:left;
-	width:100%;
-	position:relative;
+.contact_address {
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background: var(--primary_color);
+    padding: 20px;
+}
+.contact_address .contact_heading .heading {
+    color: #fff;
 }
 .address_list {
     padding: 0;
@@ -2332,9 +2360,11 @@ button:focus, input:focus, select:focus, textarea:focus{
     list-style: none;
 }
 .address_list > li {
+	display:inline-block;
+	width:100%;
     margin-bottom: 10px;
     font-size: 14px;
-    color: #414141;
+    color: #ffffff;
     font-weight: 500;
     word-break: break-word;
 }
@@ -2342,34 +2372,33 @@ button:focus, input:focus, select:focus, textarea:focus{
 	margin-bottom:0;
 }
 .address_list > li a{
-	color: #414141;
+	color: #ffffff;
 	text-decoration:none;
 }
 .address_list > li a:hover{
-	color: var(--primary_color);
+	color: #ffffff;
 }
-.address_list > li .ad_icon, .address_list > li div {
-    display: table-cell;
-    vertical-align: top;
+.address_list > li .ad_icon{
+   float:left;
+   width:40px;
 }
 .address_list > li i {
-    color: var(--primary_color);
     font-size: 18px;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background: var(--primary_color);
-    color: var(--white_color);
+    background: #fff;
+    color: var(--primary_color);
     border-radius: 50%;
     text-align: center;
 }
 .address_list > li div {
-	padding-left:12px;
+	padding-left:52px;
 }
 .address_list > li div p {
     margin-bottom: 0;
     font-size: 15px;
-    color: #555555;
+    color: #fff;
 }
 /*==== Address section css End ====*/
 /*==== Map section css End ====*/
