@@ -526,11 +526,11 @@ button:focus, input:focus, select:focus, textarea:focus{
     transition: all ease-in 0.25s;
     -webkit-transition: all ease-in 0.25s;
     -moz-transition: all ease-in 0.25s;
-    font-size: 21px;
+    font-size: 19px;
     background: transparent;
-    width: 48px;
-    height: 48px;
-    line-height: 47px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
     text-align: center;
     border: 2px solid;
     border-radius: 50%;
@@ -755,14 +755,17 @@ button:focus, input:focus, select:focus, textarea:focus{
 .dropdown_menu {
     position: absolute;
     z-index: 11;
-    background: #fff;
+    background: var(--primary_color);
     padding: 0;
     margin: 0;
     list-style: none;
-    min-width: 100px;
+    min-width: 140px;
     text-align: left;
     top: 100%;
     display: none;
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.20);
+    -webkit-box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.20);
 }
 .dropdown_menu:before {
     position: absolute;
@@ -771,13 +774,16 @@ button:focus, input:focus, select:focus, textarea:focus{
     content: "";
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #fff;
+    border-bottom: 8px solid var(--primary_color);
 }
 .dropdown_menu li {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ffffff;
+}
+.dropdown_menu li:last-child {
+    border-bottom: none;
 }
 .dropdown_menu li a {
-    color: var(--black_color);
+    color: #ffffff;
     padding: 5px 10px;
     display: block;
     text-decoration: none;
@@ -785,14 +791,14 @@ button:focus, input:focus, select:focus, textarea:focus{
     line-height: 22px;
 }
 .dropdown_menu li a:hover{
-	color: #ffffff;	
-	background: var(--primary_color);	
+	color: var(--primary_color);
+	background: #ffffff;	
 }
 /*==== Header strip css End ====*/
 /*==== Top Header css Start ====*/
 .top_header {
-    padding: 10px 0;
     border-bottom: 1px solid #e1e1e1;
+    position: relative;
 }
 .top_header > .container > .row {
     align-items: center;
@@ -811,7 +817,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .nav_toggle {
     float: left;
-    margin: 0;
+    margin-top: 13px;
     cursor: pointer;
     width: 25px;
     height: 22px;
@@ -837,8 +843,6 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .nav_toggle.close_menu {
     padding: 0;
-    float: right;
-    margin: 0 0 10px;
 }
 .nav_toggle.close_menu i {
     position: absolute;
@@ -880,7 +884,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .nav_right > ul > li {
     display: inline-block;
-    padding: 12px 0px;
+    padding: 16px 0px;
     position: relative;
     text-align: center;
     margin: 0 5px;
@@ -896,6 +900,8 @@ button:focus, input:focus, select:focus, textarea:focus{
     background-color: var(--white_color);
     min-width: 150px;
     box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.20);
+    -webkit-box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.20);
     visibility: hidden;
     opacity: 0;
     transition: all ease-in 0.25s;
@@ -959,9 +965,15 @@ button:focus, input:focus, select:focus, textarea:focus{
     line-height: 15px;
     border-radius: 50%;
 }
+.header_searchbar{
+	display:none;
+}
 /*==== Top Header css End ====*/
 /*==== Navigation Header css Start ====*/
-
+.categories_menu {
+    padding: 10px 0;
+    display: inline-block;
+}
 .categories_button {
     text-transform: uppercase;
     font-family: 'Ubuntu', sans-serif;
@@ -1078,6 +1090,7 @@ button:focus, input:focus, select:focus, textarea:focus{
     position: relative;
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
 }
 .page_banner_title h3 {
     font-size: 20px;
@@ -1129,7 +1142,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 .heading_section .heading {
     margin: 0;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 500;
     text-transform: capitalize;
     display: inline-block;
@@ -1167,7 +1180,7 @@ button:focus, input:focus, select:focus, textarea:focus{
 .home_slider .owl-nav > button.owl-prev, 
 .home_slider .owl-nav > button.owl-next {
     top: 50%;
-    margin-top: -15px;
+    margin-top: -20px;
     color: #fff;
     box-shadow: 0 0 16px rgb(0 0 0 / 52%);
     -webkit-box-shadow: 0 0 16px rgb(0 0 0 / 52%);
@@ -1284,9 +1297,12 @@ button:focus, input:focus, select:focus, textarea:focus{
 	text-decoration:none;
 }
 .cate_icon_box h4 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0;
     margin-top: 15px;
+}
+.cate_icon_box img {
+    width: 50px;
 }
 .cate_icon_box:hover{
 	text-decoration:none;
@@ -1566,6 +1582,17 @@ button:focus, input:focus, select:focus, textarea:focus{
     margin-top: 20px;
 }
 /*==== Hero Banner section css End ====*/
+/*==== Wall frame section css Start ====*/
+.wallframe_section{
+	background-color:#d3d3d3;
+}
+.wallframe_colm_wrapper {
+	text-align:center;
+}
+.wallframe_img{
+	display:inline-block;
+}
+/*==== Wall frame section css End ====*/
 /*==== special product css End ====*/
 .spcl_product_item{
 	background-color: var(--gray_bg);
@@ -1592,7 +1619,14 @@ button:focus, input:focus, select:focus, textarea:focus{
     font-size: inherit;
     color: inherit;
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+}
+.spcl_product_item .product_title > a:hover {
+    color: var(--primary_color);
 }
 .spcl_product_item .p_amount {
     margin-top: 15px;

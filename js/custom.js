@@ -73,14 +73,7 @@
 	
 	//search bar popup in mobile
 	$(".h_search_icon").on("click", function(){
-		$(".search_popup").addClass("show");
-	});
-	$(".modal-content").on("click", function(e){
-		e.stopPropagation();
-	});
-	//body click hide popup in mobile
-	$(".search_popup").on("click", function(e){
-		$(this).removeClass("show");
+		$(".header_searchbar").slideToggle(200);
 	});
 	//Home slider
 	if ($(".home_slider").length > 0){ 
